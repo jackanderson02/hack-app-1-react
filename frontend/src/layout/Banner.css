@@ -1,15 +1,17 @@
 header {
   position: relative;
   text-align: center;
-
+  font-family: 'Courier New', Courier, monospace;
   color: white;
   height: 160px;
   overflow: hidden;
-  background-color: teal;
+  background-color: rgb(254, 57, 90);
   background-size: 100%;
 }
 
-.text-overlay {
+
+.text-overlay, h2 {
+  font-size: 90px;
   width: 80%;
   position: absolute;
   top: 50%;
