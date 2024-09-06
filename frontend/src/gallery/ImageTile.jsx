@@ -8,12 +8,15 @@ import { useState } from "react";
 const ImageTile = ({ image }) => {
   const [ocrResult, setOcrResult] = useState()
 
-  const handleOCR = () => {
-    console.log(`OCR request sent for ${image}`)
+  const handleOCR = async() => {
+    //console.log(`OCR request sent for ${image}`)
 
-    
-    const fakeJson ={data: "hello"}
-    setOcrResult(fakeJson)
+    const res = await fetch(`https://cors-anywhere.herokuapp.com/https://olnpp98cc0.execute-api.eu-west-1.amazonaws.com/dev/hello-world?url=${image}`)
+
+
+  const data = await res.json()
+  console.log(data.hello)
+    setOcrResult(data.hello)
     
     
 }
@@ -27,7 +30,7 @@ const ImageTile = ({ image }) => {
         <Button  variant="secondary" size="lg" onClick={handleOCR}>Send to ocr</Button>
       </Card.Body>
       <Card.Footer>
-        <small className="text-muted">{ocrResult?.data}</small>
+        <small className="text-muted">{ocrResult}</small>
       </Card.Footer>
     </Card>
   );
