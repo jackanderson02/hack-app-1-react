@@ -35,10 +35,7 @@ module.exports.handle = async (event, context) => {
   let queryString = event.queryStringParameters
   let url = queryString.url
   const { TextractClient, AnalyzeDocumentCommand } = require("@aws-sdk/client-textract");
-  const client = new TextractClient({
-  region: "eu-west-1",
-  }),
-
+  const client = new TextractClient()
   console.log(client)
   console.log(event.queryStringParameters)
   url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJOpBYrGMw7848pqUEFBTkJVcyvFIZufGgNQ&s"
