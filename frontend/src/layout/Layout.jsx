@@ -7,8 +7,8 @@ const Layout = () => {
   return (
     <>
       <Banner
-        title="Image to Text App"
-        message="Dazzle us with your Demo at 4.00PM!"
+        title="ScribbleEase"
+        message=""
       />
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
