@@ -3,6 +3,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import ImageTile from "./ImageTile";
 
 const ImageGallery = ({ images }) => {
+  console.log("hello")
   return images.length > 0 ?
   (
     <>
