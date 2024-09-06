@@ -4,7 +4,7 @@ import ImageUploader from "./ImageUploader";
 const Upload = () => {
   return (
     <>
-      <h2>Upload</h2>
+      <h4>Upload</h4>
       <ImageUploader destination={config.imageServiceUrl()} />
     </>
   );

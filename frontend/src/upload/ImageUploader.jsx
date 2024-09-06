@@ -35,7 +35,7 @@ const ImageUploader = ({ destination }) => {
     <>
       <div className="input-group fileuploader">
         <label htmlFor="file" className="sr-only">
-          Choose a file
+          
         </label>
         <input id="file" type="file" onChange={selectFile} />
       </div>
